@@ -40,17 +40,17 @@ REFFER_POINT = int(environ.get('USER_POINT', "50")) # Set Referel point Count
 premium = environ.get('PREMIUM_LOGS', '-1002186335716')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 # lock file, set file limit 
-FILE_LIMITE = int(environ.get('FILE_LIMITE', 15))
+FILE_LIMITE = int(environ.get('FILE_LIMITE', 3))
 SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 3))
 LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5069888600').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1798348973').split()]
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "looterekrish") # widout 👉 @
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002101778109').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002087964739').split()]
 # post channel auto post new movie
-POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001998895377').split(','))))
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002263971223'))
+POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002023191399').split(','))))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002023191399'))
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002177424257'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 

@@ -47,7 +47,7 @@ LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1798348973').split()]
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "looterekrish") # widout 👉 @
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002087964739').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002148604082').split()]
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002148604082').split(','))))
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002177424257'))
@@ -60,8 +60,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'sharedisklinks.com'))
-STREAM_API = (environ.get('STREAM_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
+STREAM_SITE = (environ.get('STREAM_SITE', 'https://shortxlinks.com'))
+STREAM_API = (environ.get('STREAM_API', '99d89644e3049653b4b838934bf78d1b6024472d'))
 STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
 STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
 

@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', ""))
 API_HASH = environ.get('API_HASH', "")
-BOT_TOKEN = environ.get('BOT_TOKEN', "7586120356:AAGHkqHZJb_Su2juzXOBbmVBT3AecjhNpbs")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 
 # Bot settings
@@ -62,7 +62,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 #stream link shortner
 STREAM_SITE = (environ.get('STREAM_SITE', 'https://send.cm'))
 STREAM_API = (environ.get('STREAM_API', '3485337i1afoini3edp2ud'))
-STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/rkmovieszip'))
+STREAM_HTO = (environ.get('STREAMHTO', 'https:corporate-dalia-lootere-1c3175d5.koyeb.app/'))
 STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
 
 

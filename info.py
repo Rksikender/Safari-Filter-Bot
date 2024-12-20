@@ -63,7 +63,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 STREAM_SITE = (environ.get('STREAM_SITE', 'https://send.cm'))
 STREAM_API = (environ.get('STREAM_API', '3485337i1afoini3edp2ud'))
 STREAM_HTO = (environ.get('STREAMHTO', 'https:corporate-dalia-lootere-1c3175d5.koyeb.app/'))
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
 
 
 #verify site api and url
@@ -96,7 +96,7 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/rkmovieszip')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002186335716))
 GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002186335716)) # Group verify stats 
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002023191399)) # movies request channel, else log channel
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002081004430)) # movies request channel, else log channel
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Jhwjwp')
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)

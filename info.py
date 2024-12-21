@@ -50,8 +50,8 @@ OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "looterekrish") # widout 👉 @
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002148604082').split()]
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002081004430').split(','))))
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002081004430'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002081004430'))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002023191399'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002023191399'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
@@ -96,7 +96,7 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/rkmovieszip')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002186335716))
 GROUP_VERIFY_LOGS = int(environ.get('GROUP_VERIFY_LOGS', -1002186335716)) # Group verify stats 
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002081004430)) # movies request channel, else log channel
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', -1002023191399)) # movies request channel, else log channel
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Jhwjwp')
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)

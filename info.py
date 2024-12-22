@@ -56,9 +56,9 @@ NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
 DATABASE_URIS = environ.get('DATABASE_URIS', "mongodb://db1_uri,mongodb://db2_uri").split(',')
-DEFAULT_DATABASE_URI = environ.get('DEFAULT_DATABASE_URI', DATABASE_URIS[0])  # Use the first URI as default
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
+DEFAULT_DATABASE_URI = environ.get('DEFAULT_DATABASE_URI', "mongodb+srv://Cluster1:<db_password>@cluster0.s9qyi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" [0])  # Use the first URI as default
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster1")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safbotts')
 
 # Function to get a database client dynamically
 def get_database_client(database_uri=None):

@@ -55,9 +55,28 @@ AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002023191399'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Cluster0:q6Jwo214NcB7LCsm@cluster0.jxby6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URIS = environ.get('DATABASE_URIS', "mongodb://db1_uri,mongodb://db2_uri").split(',')
+DEFAULT_DATABASE_URI = environ.get('DEFAULT_DATABASE_URI', DATABASE_URIS[0])  # Use the first URI as default
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
+
+# Function to get a database client dynamically
+def get_database_client(database_uri=None):
+    """
+    Get a MongoDB client for the specified URI.
+    If no URI is provided, the default URI is used.
+    """
+    from pymongo import MongoClient
+    uri = database_uri or DEFAULT_DATABASE_URI
+    return MongoClient(uri)
+
+# Example: Accessing the default database
+default_client = get_database_client()
+default_db = default_client[DATABASE_NAME]
+
+# Example: Accessing another database
+other_client = get_database_client(DATABASE_URIS[1])  # Use the second database URI
+other_db = other_client[DATABASE_NAME]
 
 #stream link shortner
 STREAM_SITE = (environ.get('STREAM_SITE', 'https://send.cm'))
